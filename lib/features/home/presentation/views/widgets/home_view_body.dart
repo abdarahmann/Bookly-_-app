@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/text_styles.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_app_bar.dart';
@@ -14,6 +15,17 @@ class HomeViewBody extends StatelessWidget {
         children: [
           CustomAppBar(),
           FeaturedBooksListView(),
+          SizedBox(
+            height: 45,
+          ),
+          Row(
+            children: [
+              Text(
+                'Best Seller',
+                style: Styles.titleMedium,
+              ),
+            ],
+          )
         ],
       ),
     );

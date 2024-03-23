@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets_data.dart';
 
-class ListViewItem extends StatelessWidget {
-  const ListViewItem({
+class FeaturedListViewItem extends StatelessWidget {
+  const FeaturedListViewItem({
     super.key,
   });
 
