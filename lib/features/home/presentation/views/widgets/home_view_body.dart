@@ -23,7 +23,7 @@ class HomeViewBody extends StatelessWidget {
             children: [
               Text(
                 'Best Seller',
-                style: Styles.titleMedium,
+                style: Styles.textStyle20,
               ),
             ],
           ),
