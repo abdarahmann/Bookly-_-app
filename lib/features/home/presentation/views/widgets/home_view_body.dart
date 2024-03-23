@@ -11,7 +11,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.symmetric(horizontal: 30),
       child: Column(
         children: [
           CustomAppBar(),
@@ -26,6 +26,9 @@ class HomeViewBody extends StatelessWidget {
                 style: Styles.textStyle20,
               ),
             ],
+          ),
+          SizedBox(
+            height: 20,
           ),
           BestSellerListViewItem(),
         ],
@@ -45,12 +48,31 @@ class BestSellerListViewItem extends StatelessWidget {
         children: [
           AspectRatio(
             aspectRatio: 2.6 / 4,
-            child: Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(7),
-                  image: DecorationImage(
-                      fit: BoxFit.fill,
-                      image: AssetImage(AssetsData.kListImageItem))),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(7),
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage(AssetsData.kListImageItem))),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 18, left: 30),
+            child: Column(
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * .5,
+                  child: const Text(
+                    'Harry Potter  and the Goblet of Fire',
+                    style: Styles.textStyle20,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
             ),
           )
         ],
